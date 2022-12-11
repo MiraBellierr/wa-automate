@@ -1,8 +1,8 @@
 const wa = require("@open-wa/wa-automate");
 const Neko = require("nekos.life");
 const neko = new Neko();
-const prefix = "!";
 const axios = require("axios");
+const { Collection } = require("@discordjs/collection");
 
 wa.create({
 	sessionId: "BOT",
@@ -15,33 +15,12 @@ wa.create({
 	logConsole: false,
 	popup: true,
 	qrTimeout: 0, //0 means it will wait forever for you to scan the qr code
-}).then((client) => start(client));
+}).then((client) => {
+	client.commands = new Collection();
 
-function start(client) {
-	client.onMessage(async (message) => {
-		if (!message.body.startsWith(prefix)) return;
+	const command = require("./handlers/command");
+	const event = require("./handlers/event");
 
-		const args = message.body.slice(prefix.length).trim().split(/ +/g);
-		const cmd = args.shift().toLowerCase();
-
-		if (cmd === "ping") {
-			await client.sendText(message.from, "Pong 🏓");
-		} else if (cmd === "neko") {
-			const img = await neko.neko();
-
-			await client.sendImage(message.from, img.url, "neko.jpg", "");
-		} else if (cmd === "quote") {
-			const res = await axios.get("https://animechan.vercel.app/api/random");
-
-			await client.sendText(
-				message.from,
-				`*“${res.data.quote}”*\n\n _―${res.data.character} (${res.data.anime})_`
-			);
-		} else if (cmd === "help") {
-			await client.sendText(
-				message.from,
-				`*Commands:*\n\n!ping - Pong\n!neko - Sends a random neko image\n!quote - Sends a random anime quote`
-			);
-		}
-	});
-}
+	command(client);
+	event(client);
+});
