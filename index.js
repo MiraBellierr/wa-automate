@@ -11,7 +11,7 @@ wa.create({
 	blockCrashLogs: true,
 	disableSpins: true,
 	headless: true,
-	hostNotificationLang: "PT_BR",
+	hostNotificationLang: "en-br",
 	logConsole: false,
 	popup: true,
 	qrTimeout: 0, //0 means it will wait forever for you to scan the qr code
@@ -36,6 +36,11 @@ function start(client) {
 			await client.sendText(
 				message.from,
 				`*“${res.data.quote}”*\n\n _―${res.data.character} (${res.data.anime})_`
+			);
+		} else if (cmd === "help") {
+			await client.sendText(
+				message.from,
+				`*Commands:*\n\n!ping - Pong\n!neko - Sends a random neko image\n!quote - Sends a random anime quote`
 			);
 		}
 	});
