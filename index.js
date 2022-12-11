@@ -1,6 +1,8 @@
 const wa = require("@open-wa/wa-automate");
 const Neko = require("nekos.life");
 const neko = new Neko();
+const prefix = "!";
+const axios = require("axios");
 
 wa.create({
 	sessionId: "BOT",
@@ -17,12 +19,24 @@ wa.create({
 
 function start(client) {
 	client.onMessage(async (message) => {
-		if (message.body === "!ping") {
+		if (!message.body.startsWith(prefix)) return;
+
+		const args = message.body.slice(prefix.length).trim().split(/ +/g);
+		const cmd = args.shift().toLowerCase();
+
+		if (cmd === "ping") {
 			await client.sendText(message.from, "Pong 🏓");
-		} else if (message.body === "!neko") {
+		} else if (cmd === "neko") {
 			const img = await neko.neko();
 
 			await client.sendImage(message.from, img.url, "neko.jpg", "");
+		} else if (cmd === "quote") {
+			const res = await axios.get("https://animechan.vercel.app/api/random");
+
+			await client.sendText(
+				message.from,
+				`*“${res.data.quote}”*\n\n _―${res.data.character} (${res.data.anime})_`
+			);
 		}
 	});
 }
