@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "@open-wa/wa-automate": "^4.52.0",
+    "adhan": "^4.4.3",
     "dotenv": "^16.0.3",
     "nekos.life": "^3.0.0",
     "openai": "^3.1.0",
