@@ -18,6 +18,8 @@ module.exports = (client, message) => {
 			const response = await openai.createCompletion({
 				model: "text-davinci-003",
 				prompt: prm,
+				temperature: 0,
+				max_tokens: 4096,
 			});
 
 			console.log(response.data.choices);
