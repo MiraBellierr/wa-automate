@@ -4,6 +4,8 @@ module.exports = (client, message) => {
 	if (message.body.startsWith("@601137463940")) {
 		const prm = message.body.slice("@601137463940".length).trim();
 
+		if (!prm) return;
+
 		const { Configuration, OpenAIApi } = require("openai");
 
 		const configuration = new Configuration({
