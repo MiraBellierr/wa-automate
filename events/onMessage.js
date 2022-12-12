@@ -19,7 +19,7 @@ module.exports = (client, message) => {
 				model: "text-davinci-003",
 				prompt: prm,
 				temperature: 0,
-				max_tokens: 4096,
+				max_tokens: 2048,
 			});
 
 			console.log(response.data.choices);
