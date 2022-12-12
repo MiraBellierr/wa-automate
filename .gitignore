@@ -1,3 +1,4 @@
 _IGNORE_BOT
 BOT.data.json
 node_modules
+.env

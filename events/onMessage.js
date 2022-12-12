@@ -1,4 +1,4 @@
-const prefix = "!";
+const prefix = process.env.PREFIX;
 
 module.exports = (client, message) => {
 	if (!message.body.startsWith(prefix)) return;

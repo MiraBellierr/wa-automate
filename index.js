@@ -1,7 +1,6 @@
+require("dotenv").config();
 const wa = require("@open-wa/wa-automate");
 const Neko = require("nekos.life");
-const neko = new Neko();
-const axios = require("axios");
 const { Collection } = require("@discordjs/collection");
 
 wa.create({
