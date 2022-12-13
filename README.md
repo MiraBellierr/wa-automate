@@ -1,18 +1,55 @@
-# wa-automate
-This is a project to automate tasks on Whatsapp using NodeJS.
-## Prerequisites
-To use this project, you will need to have the following installed on your system:
-* NodeJS 12.18.3 or higher
-## Installation
-To install the dependencies, run the following command:
+<h1 align="center">Welcome to WA-Automate 👋</h1>
+<p>
+  <img alt="Version" src="https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000" />
+  <a href="#" target="_blank">
+    <img alt="License: ISC" src="https://img.shields.io/badge/License-ISC-yellow.svg" />
+  </a>
+  <a href="https://twitter.com/mirabellierr" target="_blank">
+    <img alt="Twitter: mirabellierr" src="https://img.shields.io/twitter/follow/mirabellierr.svg?style=social" />
+  </a>
+</p>
+
+> A Whatsapp bot written in NodeJS by me to automate tasks.
+
+## Install
+
+```sh
+npm install
 ```
-npm i
-```
+
 ## Usage
-To use this project, run the following command:
+
+Make sure to rename the `.env.example` to `.env` and fill the information
+
 ```
+PREFIX=
+OPEN_AI_KEY=
+```
+
+To Start this project, run the following command:
+
+```sh
 node .
 ```
-This will start the automation. You will need to scan the QR code using your Whatsapp mobile app to log in.
 
-Once logged in, you may start with `!help`
+## Author
+
+👤 **Mirabellier**
+
+- Website: https://miraiscute.com
+- Twitter: [@mirabellierr](https://twitter.com/mirabellierr)
+- Github: [@MiraBellierr](https://github.com/MiraBellierr)
+
+## 🤝 Contributing
+
+Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/MiraBellierr/wa-automate/issues).
+
+## Show your support
+
+Give a ⭐️ if this project helped you!
+
+<a href="https://www.patreon.com/MiraBellier">
+  <img src="https://c5.patreon.com/external/logo/become_a_patron_button@2x.png" width="160">
+</a>
+
+---
