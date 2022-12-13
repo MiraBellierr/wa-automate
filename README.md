@@ -26,7 +26,7 @@ PREFIX=
 OPEN_AI_KEY=
 ```
 
-To Start this project, run the following command:
+To start this project, run the following command:
 
 ```sh
 node .
