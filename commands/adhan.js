@@ -21,7 +21,7 @@ module.exports = {
 			isha: formatTime(res.isha),
 			current,
 			next,
-			nextPrayerTime,
+			nextPrayerTime: formatTime(nextPrayerTime),
 		};
 
 		const text = `*Prayer time for Kota Samarahan*\n\n*• Fajr:* ${
