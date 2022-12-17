@@ -26,7 +26,8 @@ PREFIX=
 OPEN_AI_KEY=
 DB_NAME=
 DB_USER=
-DB_PASSWORD=s
+DB_PASSWORD=
+MOVIES_DB_API=
 ```
 
 To start this project, run the following command:
