@@ -9,6 +9,14 @@ module.exports = {
 			limit: 10,
 		});
 
+		if (!findAllUser) {
+			client.reply(
+				message.from,
+				"No one has played yet! Use !quiz to play.",
+				message.id
+			);
+		}
+
 		if (!message.chat.isGroup) {
 			return;
 		}
