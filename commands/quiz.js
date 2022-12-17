@@ -54,12 +54,16 @@ module.exports = {
 							{ where: { author: message.author } }
 						);
 
-						client.reply(message.from, "Correct, you get 1 score!", message.id);
+						client.reply(
+							collected.first().from,
+							"Correct, you get 1 score!",
+							collected.first().id
+						);
 					} else {
 						client.reply(
-							message.from,
+							collected.first().from,
 							`Wrong! The answer is ${res.correct_answer}!`,
-							message.id
+							collected.first().id
 						);
 					}
 				})
@@ -95,12 +99,16 @@ module.exports = {
 							{ where: { author: message.author } }
 						);
 
-						client.reply(message.from, "Correct, you get 1 score!", message.id);
+						client.reply(
+							collected.first(),
+							"Correct, you get 1 score!",
+							collected.first().id
+						);
 					} else {
 						client.reply(
-							message.from,
+							collected.first().from,
 							`Wrong! The answer is ${res.correct_answer.toLowerCase()}!`,
-							message.id
+							collected.first().id
 						);
 					}
 				})
