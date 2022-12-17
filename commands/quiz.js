@@ -20,6 +20,8 @@ module.exports = {
 		res.incorrect_answers.push(res.correct_answer);
 		shuffle(res.incorrect_answers);
 
+		console.log(res.correct_answer);
+
 		if (res.type === "multiple") {
 			const text = `*${res.category}*\n\n${decode(res.question)}\nA. ${decode(
 				res.incorrect_answers[0]
@@ -49,7 +51,7 @@ module.exports = {
 					const choice = multiple[collected.first().body.toLowerCase()];
 
 					if (choice === res.correct_answer) {
-						await Quiz().updateOne(
+						await Quiz().update(
 							{ score: user.get("score") + 1 },
 							{ where: { author: message.author } }
 						);
@@ -67,7 +69,8 @@ module.exports = {
 						);
 					}
 				})
-				.catch(() => {
+				.catch((e) => {
+					console.log(e);
 					client.reply(
 						message.from,
 						`Time's up! The answer is ${res.correct_answer}!`,
@@ -94,7 +97,7 @@ module.exports = {
 					const choice = collected.first().body.toLowerCase();
 
 					if (choice === res.correct_answer.toLowerCase()) {
-						Quiz().updateOne(
+						Quiz().update(
 							{ score: user.get("score") + 1 },
 							{ where: { author: message.author } }
 						);
@@ -112,7 +115,8 @@ module.exports = {
 						);
 					}
 				})
-				.catch(() => {
+				.catch((e) => {
+					console.log(e);
 					client.reply(
 						message.from,
 						`Time's up! The answer is ${res.correct_answer.toLowerCase()}!`,
