@@ -10,7 +10,7 @@ module.exports = {
 		});
 
 		if (!findAllUser) {
-			client.reply(
+			return client.reply(
 				message.from,
 				"No one has played yet! Use !quiz to play.",
 				message.id
