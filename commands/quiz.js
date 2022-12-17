@@ -7,9 +7,11 @@ module.exports = {
 	description: "Starts a quiz",
 	run: async (client, message) => {
 		if (!(await Quiz().findOne({ where: { author: message.author } }))) {
-			await Quiz().create({
-				author: message.author,
-			});
+			await Quiz()
+				.create({
+					author: message.author,
+				})
+				.catch((e) => console.log(e));
 		}
 
 		const user = await Quiz().findOne({ where: { author: message.author } });
