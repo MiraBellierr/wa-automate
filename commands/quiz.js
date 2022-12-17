@@ -64,7 +64,7 @@ module.exports = {
 					} else {
 						client.reply(
 							message.from,
-							`Wrong! The answer is ${res.correct_answer}!`,
+							`Wrong! The answer is ${decode(res.correct_answer)}!`,
 							collected.first().id
 						);
 					}
@@ -73,7 +73,7 @@ module.exports = {
 					console.log(e);
 					client.reply(
 						message.from,
-						`Time's up! The answer is ${res.correct_answer}!`,
+						`Time's up! The answer is ${decode(res.correct_answer)}!`,
 						message.id
 					);
 				});
