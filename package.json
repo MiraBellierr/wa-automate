@@ -1,23 +1,23 @@
 {
-  "name": "wa-automate",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "@open-wa/wa-automate": "^4.52.0",
-    "adhan": "^4.4.3",
-    "dotenv": "^16.0.3",
-    "html-entities": "^2.3.3",
-    "nekos.life": "^3.0.0",
-    "openai": "^3.1.0",
-    "sequelize": "^6.27.0",
-    "sqlite3": "^5.1.4",
-    "urban-dictionary": "^3.0.2",
-    "weather-js2": "^2.0.2"
-  }
+	"name": "wa-automate",
+	"version": "1.2.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"@open-wa/wa-automate": "^4.52.0",
+		"adhan": "^4.4.3",
+		"dotenv": "^16.0.3",
+		"html-entities": "^2.3.3",
+		"nekos.life": "^3.0.0",
+		"openai": "^3.1.0",
+		"sequelize": "^6.27.0",
+		"sqlite3": "^5.1.4",
+		"urban-dictionary": "^3.0.2",
+		"weather-js2": "^2.0.2"
+	}
 }
