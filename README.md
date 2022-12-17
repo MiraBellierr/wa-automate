@@ -24,6 +24,9 @@ Make sure to rename the `.env.example` to `.env` and fill the information
 ```
 PREFIX=
 OPEN_AI_KEY=
+DB_NAME=
+DB_USER=
+DB_PASSWORD=s
 ```
 
 To start this project, run the following command:
