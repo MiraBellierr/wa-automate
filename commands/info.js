@@ -4,7 +4,8 @@ module.exports = {
 	run: async (client, message) => {
 		client.sendLinkWithAutoPreview(
 			message.from,
-			"https://github.com/MiraBellierr"
+			"https://github.com/MiraBellierr",
+			"Follow me on github! :D\n\nhttps://github.com/MiraBellierr"
 		);
 	},
 };
