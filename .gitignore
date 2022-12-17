@@ -2,3 +2,4 @@ _IGNORE_BOT
 BOT.data.json
 node_modules
 .env
+database.sqlite
