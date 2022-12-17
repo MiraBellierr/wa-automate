@@ -19,7 +19,9 @@ wa.create({
 
 	const command = require("./handlers/command");
 	const event = require("./handlers/event");
+	const database = require("./handlers/database");
 
 	command(client);
 	event(client);
+	database(client);
 });
