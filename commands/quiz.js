@@ -55,13 +55,13 @@ module.exports = {
 						);
 
 						client.reply(
-							collected.first().from,
+							message.from,
 							"Correct, you get 1 score!",
 							collected.first().id
 						);
 					} else {
 						client.reply(
-							collected.first().from,
+							message.from,
 							`Wrong! The answer is ${res.correct_answer}!`,
 							collected.first().id
 						);
@@ -100,13 +100,13 @@ module.exports = {
 						);
 
 						client.reply(
-							collected.first(),
+							message.from,
 							"Correct, you get 1 score!",
 							collected.first().id
 						);
 					} else {
 						client.reply(
-							collected.first().from,
+							message.from,
 							`Wrong! The answer is ${res.correct_answer.toLowerCase()}!`,
 							collected.first().id
 						);
