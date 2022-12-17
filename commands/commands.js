@@ -1,5 +1,5 @@
 module.exports = {
-	name: "help",
+	name: "commands",
 	description: "Sends a list of commands",
 	run: async (client, message) => {
 		const textCommands = client.commands
