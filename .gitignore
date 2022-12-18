@@ -3,3 +3,9 @@ BOT.data.json
 node_modules
 .env
 database.sqlite
+
+# managed
+**.data.json
+**.node-persist**
+**_IGNORE_**
+# end managed
