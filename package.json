@@ -9,7 +9,7 @@
 	"author": "",
 	"license": "ISC",
 	"dependencies": {
-		"@open-wa/wa-automate": "^4.52.0",
+		"@open-wa/wa-automate": "^4.52.1",
 		"adhan": "^4.4.3",
 		"dotenv": "^16.0.3",
 		"html-entities": "^2.3.3",
